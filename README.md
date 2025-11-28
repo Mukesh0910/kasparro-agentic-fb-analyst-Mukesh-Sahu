@@ -68,6 +68,11 @@ kaspora/
 ├── run.py
 └── requirements.txt
 
+## **Data Flow Diagram**
+
+![Data Flow Diagram](https://raw.githubusercontent.com/Mukesh0910/kasparro-agentic-fb-analyst-Mukesh-Sahu/main/Data_flow.png)
+
+
 Agent Architecture
 
 Phase 1: Planning & Data Collection
@@ -273,4 +278,5 @@ MIT License — free for educational and commercial use.
 Acknowledgments
 
 Developed as part of an AI-driven marketing analytics project using synthetic Facebook ad data.
+
 
