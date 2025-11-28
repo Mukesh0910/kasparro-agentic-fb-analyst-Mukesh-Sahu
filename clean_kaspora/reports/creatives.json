@@ -1,0 +1,12 @@
+{
+  "creative_concepts": [],
+  "testing_strategy": {
+    "duration": "7-14 days",
+    "success_metrics": [
+      "ROAS > 5.0",
+      "CTR > 1.5%"
+    ],
+    "iteration_plan": "Test and refine based on results"
+  },
+  "error": "400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]"
+}

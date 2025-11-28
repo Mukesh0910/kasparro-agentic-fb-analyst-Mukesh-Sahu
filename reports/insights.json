@@ -1,0 +1,57 @@
+{
+  "query": "upto last 8 days",
+  "timestamp": "2025-11-28T22:53:12.229659",
+  "insights": [
+    {
+      "insight": {
+        "title": "Error generating insights",
+        "description": "400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]",
+        "severity": "low",
+        "confidence": 0.0,
+        "evidence": {},
+        "error": true
+      },
+      "evaluation": {
+        "overall_score": 0.0,
+        "passed": false,
+        "scores": {
+          "evidence_quality": 0.0,
+          "statistical_validity": 0.0,
+          "actionability": 0.0,
+          "business_relevance": 0.0
+        },
+        "verdict": "reject",
+        "error": "400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]"
+      },
+      "passed": false
+    }
+  ],
+  "data_summary": {
+    "total_rows": 4500,
+    "date_range": {
+      "start": "2025-01-01",
+      "end": "2025-03-31"
+    },
+    "campaigns": 367,
+    "total_spend": 2105579.9,
+    "total_revenue": 12265700.72,
+    "overall_roas": 5.83,
+    "missing_values": {
+      "campaign_name": 0,
+      "adset_name": 0,
+      "date": 0,
+      "spend": 113,
+      "impressions": 0,
+      "clicks": 152,
+      "ctr": 0,
+      "purchases": 0,
+      "revenue": 133,
+      "roas": 9,
+      "creative_type": 0,
+      "creative_message": 0,
+      "audience_type": 0,
+      "platform": 0,
+      "country": 0
+    }
+  }
+}
