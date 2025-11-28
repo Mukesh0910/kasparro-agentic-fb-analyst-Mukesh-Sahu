@@ -1,4 +1,4 @@
-Kasparro — Agentic Facebook Performance Analyst
+# **Kasparro — Agentic Facebook Performance Analyst**
 
 Kasparro is an AI-powered, production-ready multi-agent system for analyzing Facebook advertising data and generating actionable insights.
 Built on Google Gemini AI, Kasparro combines five specialized agents to process historical performance data, validate insights statistically, and produce data-driven creative recommendations.
@@ -273,3 +273,4 @@ MIT License — free for educational and commercial use.
 Acknowledgments
 
 Developed as part of an AI-driven marketing analytics project using synthetic Facebook ad data.
+
