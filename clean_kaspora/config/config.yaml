@@ -1,7 +1,0 @@
-python: "3.10"
-random_seed: 42
-confidence_min: 0.6
-data_path: "data/synthetic_fb_ads_undergarments.csv"
-model: "gemini-1.5-flash"
-temperature: 0.7
-max_tokens: 2000
