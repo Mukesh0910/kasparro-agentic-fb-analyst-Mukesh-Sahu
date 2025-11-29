@@ -1,4 +1,6 @@
-Here is the **complete, clean, final one-shot README.md** including the **Data Flow Diagram**:
+Got it — you want the **API key setup section added** into the final README version.
+
+Here is the updated **one-shot README.md** with a clean, professional **API Key Setup** section included.
 
 ---
 
@@ -36,6 +38,27 @@ Example queries:
 python run.py "Compare Image vs Video ad performance"
 python run.py "Identify low-ROAS high-spend campaigns"
 python run.py "Suggest improvements for underperforming ads"
+```
+
+---
+
+## **API Key Setup**
+
+Kasparro requires a valid **Google Gemini API Key**.
+
+1. Get your API key from:
+   **[https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)**
+
+2. Open your `.env` file and add:
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+3. Verify the key is loaded correctly:
+
+```bash
+python -c "import os; from dotenv import load_dotenv; load_dotenv(); print(os.getenv('GEMINI_API_KEY')[:10] + '...')"
 ```
 
 ---
