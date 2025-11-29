@@ -1,22 +1,26 @@
-Here is your **final, clean, concise, human-readable README**, now updated with **your exact image link**:
-
----
-
 # **Kasparro — Agentic Facebook Performance Analyst**
 
-Kasparro is an AI-powered multi-agent system that analyzes Facebook ads performance data and generates actionable insights.
+Kasparro is an AI-powered multi-agent system designed to analyze Facebook Ads performance and produce actionable insights.
 Built with **Google Gemini**, it automates KPI analysis, trend detection, statistical validation, and creative recommendation generation.
 
 ---
 
 ## **Key Features**
 
-* **Five-Agent Architecture:** Planner, Data, Insight, Evaluator, Creative
+* **Five-Agent Architecture**
+  Planner • Data • Insight • Evaluator • Creative
 * **Natural Language Querying**
-* **Automated Metrics:** ROAS, CTR, CPC, CPA
-* **Insight Validation:** Evidence, statistical strength, actionability
+  “Compare image vs video ads”, “Find low-ROAS campaigns”, etc.
+* **Automated Performance Metrics**
+  ROAS, CTR, CPC, CPA, Spend, Revenue
+* **Validated Insights**
+  Evidence quality, statistical strength, business relevance
 * **AI-Generated Creative Strategies**
-* **Detailed Reports & Logs (Markdown + JSON)**
+  Complete with formats, audiences, and A/B test plans
+* **Full Reporting**
+  JSON + Markdown output inside `/reports`
+* **Logging & Traces**
+  Stored in `/logs`
 
 ---
 
@@ -32,32 +36,36 @@ Built with **Google Gemini**, it automates KPI analysis, trend detection, statis
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-copy .env.example .env   # Add GEMINI_API_KEY
+
+copy .env.example .env
+# Add: GEMINI_API_KEY=your_api_key_here
+
 python run.py "Analyze ROAS trends in last 7 days"
 ```
 
-### Example Queries
+### Additional Query Examples
 
 ```bash
 python run.py "Compare Image vs Video ad performance"
 python run.py "Find high-spend low-ROAS campaigns"
 python run.py "Suggest improvements for underperforming ads"
+python run.py "Why is CTR declining?"
 ```
 
 ---
 
 ## **API Key Setup**
 
-1. Get your Gemini API key:
+1. Get your Gemini API key
    [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
 
-2. Add it to `.env`:
+2. Add it to your `.env` file:
 
 ```
 GEMINI_API_KEY=your_api_key_here
 ```
 
-3. Confirm it's loaded:
+3. Verify it loaded:
 
 ```bash
 python -c "import os; from dotenv import load_dotenv; load_dotenv(); print(os.getenv('GEMINI_API_KEY')[:10] + '...')"
@@ -70,14 +78,14 @@ python -c "import os; from dotenv import load_dotenv; load_dotenv(); print(os.ge
 ```
 kaspora/
 ├── src/
-│   ├── agents/            # Five core agents
+│   ├── agents/            # Planner, Data, Insight, Evaluator, Creative
 │   ├── orchestrator/      # Agent workflow controller
-│   └── utils/             # Logging, prompts, data tools
-├── data/
-├── tests/                 # All test files
-├── reports/
-├── logs/
+│   └── utils/             # Logging, prompts, data loading
 ├── config/
+├── data/
+├── tests/                 # Unit tests for agents + evaluator
+├── reports/               # Generated analysis outputs
+├── logs/                  # Execution traces
 └── run.py
 ```
 
@@ -85,35 +93,55 @@ kaspora/
 
 ## **How It Works**
 
-1. **Planner Agent**
-   Converts your query into a structured plan.
+### **1. Planner Agent**
 
-2. **Data Agent**
-   Loads & calculates metrics from CSV (ROAS, CTR, CPA, etc.).
+Translates natural-language queries into structured analysis plans.
 
-3. **Insight Agent**
-   Uses Gemini to identify trends and performance drivers.
+### **2. Data Agent**
 
-4. **Evaluator Agent**
-   Scores insights on evidence, validity, actionability, relevance.
-   (Insights <60% are rejected.)
+Loads CSV data, filters by date ranges, and computes metrics (ROAS, CTR, CPC, CPA).
 
-5. **Creative Agent**
-   Generates ad ideas, formats, audiences, and A/B test plans.
+### **3. Insight Agent**
 
-6. **Reporting**
-   Outputs Markdown + JSON reports and logs.
+Gemini analyzes patterns, trends, anomalies, and opportunities.
+
+### **4. Evaluator Agent**
+
+Validates each insight on:
+
+* Evidence quality
+* Statistical validity
+* Actionability
+* Business relevance
+
+Insights scoring **<60%** are rejected.
+
+### **5. Creative Agent**
+
+Generates platform-ready ad concepts, audiences, formats, and test budgets.
+
+### **6. Reporting**
+
+Creates:
+
+* `analysis_report_[timestamp].md`
+* `insights_[timestamp].json`
+* `creatives_[timestamp].json`
+* Execution logs
 
 ---
 
 ## **Configuration**
 
-`config/config.yaml` controls:
+Edit `config/config.yaml`:
 
-* Model (Gemini 1.5 Flash)
-* Temperature, max tokens
-* Minimum confidence threshold
-* Data file path
+```yaml
+model: "gemini-1.5-flash"
+temperature: 0.7
+max_tokens: 2000
+confidence_min: 0.6
+data_path: "data/synthetic_fb_ads_undergarments.csv"
+```
 
 ---
 
@@ -127,24 +155,24 @@ Run all tests:
 pytest -v
 ```
 
-Run with coverage:
+With coverage:
 
 ```bash
 pytest --cov=src --cov-report=html
 ```
 
-(All tests pass successfully.)
-
 ---
 
 ## **Status**
 
-**Version:** v1.0 — Production Ready
+**Version:** v1.0
+**State:** Production Ready
 
-* Full multi-agent workflow
-* Insight validation + creative generation
-* Automated reports & logs
-* Compatible with Windows
-* All tests validated
+* Full multi-agent pipeline
+* Insight validation & creative generation
+* Robust error handling
+* Windows-compatible
+* All tests passing
+* Complete documentation
 
 ---
